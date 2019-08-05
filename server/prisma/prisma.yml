@@ -1,0 +1,10 @@
+endpoint: https://us1.prisma.sh/arthur-manuel-bandeira/example-react-apollo/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client/
+
+hooks:
+  post-deploy:
+    - prisma generate
